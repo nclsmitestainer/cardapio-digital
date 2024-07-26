@@ -10,7 +10,7 @@ interface CardCategoryProps {
 }
 
 const CardCategory = ({ category, icon, className, value }: CardCategoryProps) => {
-  const {categoryActive, setCategoryActive} = useData()
+  const { setCategoryActive } = useData()
 
   return (
     <button

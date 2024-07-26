@@ -20,12 +20,11 @@ const Items = () => {
   const filteredItems = useMemo(
   () => menu.filter((item) => item.category === categoryActive),
   [categoryActive]
-);
+  );
 
   return (
     <div className="flex flex-wrap gap-4 mx-7 mt-4">
       {filteredItems
-      .filter((item) => item.category === categoryActive)
       .map((item) => (<ItemCard key={item.id} item={item} />))}
     </div>
   )

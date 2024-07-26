@@ -56,7 +56,7 @@ const Filter = () => {
         <FilterSeparator name='bebidas'>
           <CardCategory value='sucos' category="Sucos" icon={<Juice />} />
           <CardCategory value='refrigerantes' category="Refrigerantes" icon={<Refrigerante />} />
-          <CardCategory value='drinks' category="Drinks" icon={<Drinks />} />
+          <CardCategory value='drink' category="Drinks" icon={<Drinks />} />
           <CardCategory value='cervejas' category="Cervejas" icon={<Beer />} />
         </FilterSeparator>
 
