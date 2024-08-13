@@ -593,5 +593,110 @@
     "price": 22,
     "category": "drink",
     "description": "gin com tônica refrescante"
+  },
+  {
+    "id": 86,
+    "name": "presunto",
+    "price": 4,
+    "category": "acrescimos",
+    "description": "adicione presunto ao seu lanche"
+  },
+  {
+    "id": 87,
+    "name": "queijo",
+    "price": 4,
+    "category": "acrescimos",
+    "description": "adicione queijo ao seu lanche"
+  },
+  {
+    "id": 88,
+    "name": "cheddar",
+    "price": 6,
+    "category": "acrescimos",
+    "description": "adicione cheddar ao seu lanche"
+  },
+  {
+    "id": 89,
+    "name": "catupiry",
+    "price": 6,
+    "category": "acrescimos",
+    "description": "adicione catupiry ao seu lanche"
+  },
+  {
+    "id": 90,
+    "name": "milho",
+    "price": 3,
+    "category": "acrescimos",
+    "description": "adicione milho ao seu lanche"
+  },
+  {
+    "id": 91,
+    "name": "alface",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione alface ao seu lanche"
+  },
+  {
+    "id": 92,
+    "name": "tomate",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione tomate ao seu lanche"
+  },
+  {
+    "id": 93,
+    "name": "vinagrete",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione vinagrete ao seu lanche"
+  },
+  {
+    "id": 94,
+    "name": "cebola caramelizada",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione cebola caramelizada ao seu lanche"
+  },
+  {
+    "id": 95,
+    "name": "batata palha",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione batata palha ao seu lanche"
+  },
+  {
+    "id": 96,
+    "name": "ovo",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione ovo ao seu lanche"
+  },
+  {
+    "id": 97,
+    "name": "bacon",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione bacon ao seu lanche"
+  },
+  {
+    "id": 98,
+    "name": "purê",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione purê ao seu lanche"
+  },
+  {
+    "id": 99,
+    "name": "hamburguer",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione hamburguer ao seu lanche"
+  },
+  {
+    "id": 100,
+    "name": "maionese adicional",
+    "price": 2,
+    "category": "acrescimos",
+    "description": "adicione purê ao seu lanche"
   }
 ]

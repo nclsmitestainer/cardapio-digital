@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge';
-import { useData } from '../contexts/UserContext';
+import { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
+import { useData } from "../contexts/UserContext";
 
 interface CardCategoryProps {
   category: string;
@@ -9,14 +9,19 @@ interface CardCategoryProps {
   className?: string;
 }
 
-const CardCategory = ({ category, icon, className, value }: CardCategoryProps) => {
-  const { setCategoryActive } = useData()
+const CardCategory = ({
+  category,
+  icon,
+  className,
+  value,
+}: CardCategoryProps) => {
+  const { setCategoryActive } = useData();
 
   return (
     <button
       value={value}
       className={twMerge(
-        'flex items-center bg-[#222325] rounded-xl flex-none max-h-[84px] hover:bg-red-600 transition-all duration-300',
+        "flex items-center bg-[#222325] rounded-xl flex-none max-h-[84px] hover:bg-red-600 transition-all duration-300",
         className
       )}
       onClick={(e) => setCategoryActive(e.currentTarget.value)}

@@ -1,7 +1,9 @@
 // Icons
-import Menu from '../assets/menu.svg';
-import Cart from '../assets/cart.svg';
-import Person from '../assets/person.svg';
+import Menu from "../assets/menu.svg";
+import Cart from "../assets/cart.svg";
+import Person from "../assets/person.svg";
+import { useData } from "../contexts/UserContext";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -19,9 +21,12 @@ const Header = () => {
         <button className="p-2">
           <Person />
         </button>
-        <button className="bg-red-600 p-3 rounded-full hover:bg-red-900 transition-all duration-300">
+        <NavLink
+          to="/cart"
+          className="bg-red-600 p-3 rounded-full hover:bg-red-900 transition-all duration-300"
+        >
           <Cart />
-        </button>
+        </NavLink>
       </div>
     </header>
   );

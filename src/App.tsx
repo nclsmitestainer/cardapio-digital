@@ -1,19 +1,14 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Menu from './components/Menu';
-import Modal from './components/Modal';
-import SearchBar from './components/SearchBar';
-import { UserContextProvider } from './contexts/UserContext';
+import { UserContextProvider } from "./contexts/UserContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+import { MyRoutes } from "./Routes";
 
 function App() {
   return (
     <>
       <UserContextProvider>
-        <Header />
-        <SearchBar />
-        <Menu />
-        {/* <Modal /> */}
-        <Footer />
+        <ToastContainer />
+        <MyRoutes />
       </UserContextProvider>
     </>
   );

@@ -1,33 +1,59 @@
-import ItemCard from "./ItemCard"
-import cardapio from '../data/cardapio.json'
-import { useData } from "../contexts/UserContext"
-import { useMemo } from "react"
-
-export interface ItemProps {
-  id: number
-  name: string
-  price: number
-  category: string
-  description: string
-}
-
-const menu: ItemProps[] = cardapio
-
+import ItemCard from "./ItemCard";
+import menu, { MenuItem } from "../data/data";
+import { useData } from "../contexts/UserContext";
+import { useCallback, useEffect, useState } from "react";
+import ModalTest from "./ModalTest";
 
 const Items = () => {
-  const {categoryActive} = useData()
+  const { categoryActive } = useData();
+  const [items, setItems] = useState<MenuItem[]>([]);
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
+  const [open, setOpen] = useState(false);
 
-  const filteredItems = useMemo(
-  () => menu.filter((item) => item.category === categoryActive),
-  [categoryActive]
-  );
+  const getItems = useCallback((category: string) => {
+    if (category === "todas") {
+      const allItems = Object.entries(menu)
+        .filter(([key]) => key !== "acrescimos")
+        .flatMap(([_, items]) => items);
+      setItems(allItems);
+    } else {
+      const categoryItems = menu[category as keyof typeof menu];
+      if (Array.isArray(categoryItems)) {
+        setItems(categoryItems);
+      } else {
+        setItems([]);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    getItems(categoryActive);
+  }, [categoryActive, getItems]);
+
+  const handleItemClick = (item: MenuItem) => {
+    setSelectedItem(item);
+    setOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpen(false);
+    setSelectedItem(null);
+  };
 
   return (
-    <div className="flex flex-wrap gap-4 mx-7 mt-4">
-      {filteredItems
-      .map((item) => (<ItemCard key={item.id} item={item} />))}
+    <div className="flex flex-wrap justify-center gap-4 mx-2 lg:mx-7 mt-4">
+      {items.map((item) => (
+        <ItemCard
+          key={item.id}
+          item={item}
+          onClick={() => handleItemClick(item)}
+        />
+      ))}
+      {open && selectedItem && (
+        <ModalTest item={selectedItem} onClose={handleCloseModal} />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Items
+export default Items;
