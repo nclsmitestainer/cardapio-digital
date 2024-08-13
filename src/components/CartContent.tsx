@@ -29,7 +29,7 @@ const CartContent = () => {
           </h2>
         </div>
       ) : (
-        <div className="items-center h-full flex-col flex flex-wrap">
+        <div className="items-center h-full flex-col flex overflow-x-auto">
           {cart.map((item) => (
             <CartItem
               key={item.id}

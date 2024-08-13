@@ -2,7 +2,7 @@ import ItemCard from "./ItemCard";
 import menu, { MenuItem } from "../data/data";
 import { useData } from "../contexts/UserContext";
 import { useCallback, useEffect, useState } from "react";
-import ModalTest from "./ModalTest";
+import ModalAdd from "./ModalAdd";
 
 const Items = () => {
   const { categoryActive } = useData();
@@ -50,7 +50,7 @@ const Items = () => {
         />
       ))}
       {open && selectedItem && (
-        <ModalTest item={selectedItem} onClose={handleCloseModal} />
+        <ModalAdd item={selectedItem} onClose={handleCloseModal} />
       )}
     </div>
   );

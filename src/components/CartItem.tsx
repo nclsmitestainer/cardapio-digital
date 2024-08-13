@@ -25,7 +25,7 @@ const CartItem = ({
 
   return (
     <>
-      <div className="text-white flex justify-between items-center gap-4 first:mt-3 p-4 border-b border-neutral-600 max-w-xl w-full last:border-none">
+      <div className="text-white flex justify-between items-center gap-4 p-4 border-b border-neutral-600 max-w-xl w-full last:border-none">
         <div className="w-28 h-28 self-center border-[1px] border-red-600 flex-none rounded-md items-center">
           <img
             className="w-28 h-28 p-2 object-cover rounded-md"

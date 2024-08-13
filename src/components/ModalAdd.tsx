@@ -10,7 +10,7 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const ModalTest = ({ item, onClose }: ModalProps) => {
+const ModalAdd = ({ item, onClose }: ModalProps) => {
   const { addToCart } = useData();
   const [extras, setExtras] = useState<Extra[]>([]);
   const [quantity, setQuantity] = useState(1);
@@ -203,7 +203,6 @@ const ModalTest = ({ item, onClose }: ModalProps) => {
                 placeholder="Escreva aqui suas observações."
               ></textarea>
               <span className="flex justify-end">{`${observations.length}/255`}</span>
-              <span>{observations}</span>
             </div>
           </div>
 
@@ -251,4 +250,4 @@ const ModalTest = ({ item, onClose }: ModalProps) => {
   );
 };
 
-export default ModalTest;
+export default ModalAdd;
